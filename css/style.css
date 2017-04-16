@@ -1,0 +1,125 @@
+html, body {
+	min-height: 100%;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+.colorful {
+	background:
+		-webkit-linear-gradient(45deg, hsla(210, 98%, 46%, 1) 0%, hsla(210, 98%, 46%, 0) 70%),
+		-webkit-linear-gradient(315deg, hsla(22, 98%, 45%, 1) 10%, hsla(22, 98%, 45%, 0) 80%),
+		-webkit-linear-gradient(225deg, hsla(226, 94%, 47%, 1) 10%, hsla(226, 94%, 47%, 0) 80%),
+		-webkit-linear-gradient(135deg, hsla(177, 98%, 45%, 1) 100%, hsla(177, 98%, 45%, 0) 70%);
+	background:
+		linear-gradient(45deg, hsla(210, 98%, 46%, 1) 0%, hsla(210, 98%, 46%, 0) 70%),
+		linear-gradient(135deg, hsla(22, 98%, 45%, 1) 10%, hsla(22, 98%, 45%, 0) 80%),
+		linear-gradient(225deg, hsla(226, 94%, 47%, 1) 10%, hsla(226, 94%, 47%, 0) 80%),
+		linear-gradient(315deg, hsla(177, 98%, 45%, 1) 100%, hsla(177, 98%, 45%, 0) 70%);
+	}
+
+.container {
+	color: white;
+	font-family: 'Crimson Text', serif;
+	height: 100%;
+}
+
+.container .img-thumb {
+	width: 256px;
+	cursor: pointer;
+	border: 1px white solid;
+	border-radius: 2px;
+	padding: 2px;
+}
+
+.container .img-thumb:hover {
+		opacity: 0.5;
+		filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.container .content {
+	border: 2px white solid;
+	padding: 10px;
+	font-size: 25px;
+	margin-top: 5px;
+	max-width: 1000px;
+	border-radius: 25px;
+}
+
+.container a {
+	word-wrap: break-word;
+}
+
+.container-form {
+	border: 2px white solid;
+	padding: 10px;
+	font-size: 20px;
+	margin: 20px;
+	width: auto;
+	border-radius: 0px;
+	display: block;
+	max-width: 400px;
+	width: 70%;
+}
+
+.container-form h3 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+
+.container-form h3:hover {
+	color: #333;
+}
+
+.container-form label {
+		margin-top: 20px;
+}
+
+.container-form input {
+	font-size: 17.5px;
+}
+
+.container-form textarea {
+	font-size: 17.5px;
+}
+
+.container-form .div-error {
+	color: black;
+}
+
+.button {
+	font-size: 25px;
+	color: white;
+	font-family: 'Crimson Text', serif;
+	background-color: Transparent;
+  background-repeat:no-repeat;
+	border: 2px white solid;
+	margin-bottom: 5px;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: rgba(0,0,0,0.4);
+}
+
+.active-btn {
+	background-color: rgba(0,0,0,0.4);
+}
+
+.action-btn {
+	border-radius: 0px;
+}
+
+#popbox-image {
+	padding: 10px;
+	background-color: rgba(0,0,0,0.8);
+	max-width: 80%;
+}
+
+#popbox-image-img {
+	max-height: 500px;
+	width: 100%;
+}

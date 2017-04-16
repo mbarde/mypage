@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="mstile-144x144.png">
+
+		<script src="js\jquery-3.0.0.min.js"></script>
+
+		<link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css\style.css" type="text/css" >
+
+		<script src="js\main.js"></script>
+		<script src="js\jquery.bpopup.min.js" ></script>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+		<title>m.barde</title>
+	</head>
+	<body class="colorful">
+
+		<div class="container">
+
+			<h1>m.barde</h1>
+
+			<button class="button active-btn nav-btn" content-id="0">Fight of Dwarves</button>
+			<button class="button nav-btn" content-id="2">QuadWorld</button>
+			<button class="button nav-btn" content-id="3">AlienSurf</button>
+			<button class="button nav-btn" content-id="1">Scooter Bot</button>
+			<button class="button nav-btn" content-id="4">About</button>
+
+			<div class="content" content-id="0">
+				<b>A simple 4 player beat-‘em-up game based on MelonJS.</b><br>
+				Fight of Dwarves! is a simple beat beat-‘em-up game for 2 to 4 players.<br>
+				It is based on MelonJS, which "is a lightweight but yet powerful HTML5 framework designed from the ground up to provide a true plugin-free
+				'write-once, run-everywhere' gaming oriented library."<br><br>
+				<a href="/fod">Play game right here!</a>
+				<br><br>
+				GitHub: <a href="https://github.com/mbarde/fightOfDwarves" target="_blank">https://github.com/mbarde/fightOfDwarves</a>
+				<br><br>
+				<img class="img-thumb" src="img/fod-screen.jpg"/>
+				<img class="img-thumb" src="img/fod-screen-2.jpg"/>
+				<br>
+			</div>
+
+			<div class="content" content-id="1" style="display: none">
+				"I am a robot which randomly posts lines of <a href="https://en.wikipedia.org/wiki/Scooter_(band)" target="_blank">Scooter</a> lyrics. They will motivate you, inspire you and stimulate your thoughts."
+				<br><br>
+				A bot written in JavaScript, which tweets randomly lines of song texts of a german band called <a href="https://en.wikipedia.org/wiki/Scooter_(band)" target="_blank">Scooter</a>.
+				They are very famous for their lead singer H.P. Baxxter and their very lyrical texts.
+				<br><br>
+				Follow this bot on twitter: <a href="https://twitter.com/scooterlyrics">@ScooterLyrics</a>
+				<br><br>
+				I created this bot following <a href="http://www.bryanbraun.com/2014/12/13/how-to-set-up-a-simple-javascript-twitter-bot">this nice tutorial</a> by Bryan Braun.
+				<br><br>
+				GitHub: <a href="https://github.com/mbarde/scooterbot" target="_blank">https://github.com/mbarde/scooterbot</a>
+			</div>
+
+			<div class="content" content-id="2" style="display: none">
+				In this Android game you are able to explore the fantastic QuadWorld.<br>
+				Modify the world, combine the elements, create new stuff and fill the world.<br>
+				<br>
+				Tested on Android 4.2 and 6.0.1 (minimal requirement is 2.3.3).<br>
+				Technologies: Java and OpenGL ES 2.0.<br>
+				<br>
+				Textures/Sprites are from the <a href="http://lpc.opengameart.org/" target="_blank">Liberated Pixel Cup</a>
+				and <a href="http://opengameart.org/" target="_blank">opengameart.org</a> .<br>
+				<br>
+				GitHub: <a href="https://github.com/mbarde/QuadWorld" target="_blank">https://github.com/mbarde/QuadWorld</a>
+				<br><br>
+				<a href="files/QuadWorld.apk"><button class="button action-btn">Download built APK for Android (vers. 0.5.5)</button></a><br>
+				<br>
+				<img class="img-thumb" src="img/qw-screen.png"/>
+				<img class="img-thumb" src="img/qw-screen-2.png"/>
+			</div>
+
+			<div class="content" content-id="3" style="display: none">
+				Some aliens invaded your lecture room.<br>
+				You put on an astronaut suite, grab your surfboard and kill them by surfing over their heads.<br>
+				<br>
+				Tested on Android 4.2 and 6.0.1.<br>
+				Technologies: Java and OpenGL ES 2.0.<br>
+				<br>
+				Controls: Tilt your device to control the surfer. Touch the screen to jump.<br>
+				<br>
+				GitHub: <a href="https://github.com/mbarde/AlienSurf" target="_blank">https://github.com/mbarde/AlienSurf</a>
+				<br><br>
+				<a href="files/AlienSurf.apk"><button class="button action-btn">Download built APK for Android (vers. 0.4)</button></a><br>
+				<br>
+				<img class="img-thumb" src="img/as-screen.jpg"/>
+				<img class="img-thumb" src="img/as-screen-2.jpg"/>
+				<img class="img-thumb" src="img/as-screen-3.jpg"/>
+			</div>
+
+			<div class="content" content-id="4" style="display: none">
+				My name is Matthias Barde. I am a computer science student at the <a href="https://www.uni-koblenz-landau.de/en/university-of-koblenz-landau?set_language=en" target="_blank">University of Koblenz-Landau.</a>
+				<br><br>
+				On this page you can check out some of my fun projects. Feel free to leave some comment or contact me if you are interested in my work.
+				<br>
+				<div id="container-form-contact" class="container-form">
+				<h3>Contact form</h3>
+				<form id="form-contact" method="post" action="contact.php" style="display:none">
+					<div class="div-error"><br></div>
+			    <label>Name</label><br>
+			    <input name="name" placeholder="Type Here"><br><br>
+			    <label>Email</label><br>
+			    <input name="email" type="email" placeholder="Type Here"><br><br>
+			    <label>Message</label><br>
+			    <textarea name="message" placeholder="Type Here"></textarea><br><br>
+			  	<button id="btn-submit-contact" type="button" class="button action-btn">Submit</button><br>
+				</form>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="popbox-image" style="display:none">
+			<img id="popbox-image-img" src=""/><br>
+			<button class="button action-btn b-close" style="float:right">Close</button>
+		</div>
+
+	</body>
+</html>
