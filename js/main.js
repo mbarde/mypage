@@ -34,7 +34,7 @@ $(document).ready( function() {
 			data: $('#form-contact').serialize(),
 			success: function(response) {
 				if (response.length < 5) {
-					$('#container-form-contact').html("<p>Mail has successfully been sent. Thank you! I will answer it as fast as possible :)");
+					$('#container-form-contact').html("<p>Mail has successfully been sent. Thank you! I will answer it as fast as possible :)</p>");
 				} else {
 					$('#form-contact .div-error').html(response);
 				}
@@ -50,6 +50,6 @@ $(document).ready( function() {
 	});
 
 	$('#popbox-image .active-btn').click( function() {
-		
+
 	});
 });
