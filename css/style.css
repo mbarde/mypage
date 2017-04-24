@@ -49,6 +49,7 @@ h1 {
 
 .container a {
 	word-wrap: break-word;
+	color: black;
 }
 
 .container-form {
