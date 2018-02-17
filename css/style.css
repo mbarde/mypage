@@ -25,6 +25,21 @@ h1 {
 	height: 100%;
 }
 
+button.nav-btn {
+	padding: 5px 10px 5px 10px;
+	line-height: 42px;
+}
+
+img.icon-nav {
+	margin-bottom: -5px;
+	width: 32px;
+	height: 32px;
+}
+
+img.icon-nav.round {
+	border-radius: 16px;
+}
+
 .container .img-thumb {
 	width: 256px;
 	cursor: pointer;
@@ -38,9 +53,18 @@ h1 {
 		filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
+.container .avatar {
+	width: 128px;
+	height: 128px;
+	border-radius: 6px;
+	float: right;
+	margin-right: 12px;
+	border: 1px white solid;
+}
+
 .container .content {
 	border: 2px white solid;
-	padding: 10px;
+	padding: 20px;
 	font-size: 25px;
 	margin-top: 5px;
 	max-width: 1000px;
