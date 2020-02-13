@@ -6,6 +6,11 @@ h1 {
 	font-size: 32px;
 }
 
+h1 a {
+	color: white !important;
+	text-decoration: none;
+}
+
 .colorful {
 	background:
 		-webkit-linear-gradient(45deg, hsla(210, 98%, 46%, 1) 0%, hsla(210, 98%, 46%, 0) 70%),
@@ -23,6 +28,7 @@ h1 {
 	color: white;
 	font-family: 'Crimson Text', serif;
 	height: 100%;
+	text-align: center;
 }
 
 button.nav-btn {
@@ -50,7 +56,7 @@ img.icon-nav.round {
 
 .container .img-thumb:hover {
 		opacity: 0.5;
-		filter: alpha(opacity=50); /* For IE8 and earlier */
+		filter: alpha(opacity=50);
 }
 
 .container .avatar {
@@ -62,13 +68,22 @@ img.icon-nav.round {
 	border: 1px white solid;
 }
 
+.container .avatar:hover {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
 .container .content {
 	border: 2px white solid;
+	box-shadow: 2px 2px 2px black;
 	padding: 20px;
 	font-size: 25px;
-	margin-top: 5px;
+	margin-top: 30px;
 	max-width: 1000px;
 	border-radius: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
 }
 
 .container a {
@@ -126,12 +141,17 @@ img.icon-nav.round {
 	cursor: pointer;
 }
 
+button::-moz-focus-inner {
+  border: 0;
+}
+
 .button:hover {
 	background-color: rgba(0,0,0,0.4);
 }
 
 .active-btn {
 	background-color: rgba(0,0,0,0.4);
+	box-shadow: 2px 2px 2px black
 }
 
 .action-btn {
