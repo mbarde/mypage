@@ -28,8 +28,4 @@ $(document).ready( function() {
 			$('#popbox-image').bPopup();
 		});
 	});
-
-	$('#popbox-image .active-btn').click( function() {
-
-	});
 });
