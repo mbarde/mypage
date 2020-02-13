@@ -29,8 +29,9 @@ $(document).ready(function() {
 	});
 
 	var STROBE_MODE = false;
-	$('#btn-toggle-strobe').click(function() {
-		if (STROBE_MODE === false) {
+
+	function setStrobeMode(toValue) {
+		if (toValue === true) {
 			STROBE_MODE = true;
 			$('#btn-toggle-strobe').addClass('active-btn');
 			document.addEventListener('mousemove', handleMouseMove);
@@ -39,8 +40,25 @@ $(document).ready(function() {
 			$('#btn-toggle-strobe').removeClass('active-btn');
 			document.removeEventListener('mousemove', handleMouseMove);
 		}
+	}
+
+	$('#btn-toggle-strobe').click(function() {
+		setStrobeMode(!STROBE_MODE);
 	});
+
+	if (is_touch_device()) {
+	 setStrobeMode(true);
+	}
 });
+
+function is_touch_device() {
+	try {
+		document.createEvent('TouchEvent');
+		return true;
+	} catch (e) {
+		return false;
+	}
+}
 
 function setLinGradOfEl(jsEl, deg0) {
 	if (deg0 > 360) deg0 -= 360;

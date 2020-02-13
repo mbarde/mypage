@@ -91,6 +91,12 @@ img.icon-nav.round {
 	color: black;
 }
 
+.container pre {
+	font-size: 18px;
+	padding-left: 20px;
+	overflow-x: auto;
+}
+
 .container-form {
 	border: 2px white solid;
 	padding: 10px;
@@ -198,5 +204,9 @@ button::-moz-focus-inner {
 		left: auto;
 		right: 10px;
 		top: 10px;
+	}
+
+	.container pre {
+		padding: 0;
 	}
 }
