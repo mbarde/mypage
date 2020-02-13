@@ -141,6 +141,10 @@ img.icon-nav.round {
 	cursor: pointer;
 }
 
+button:focus {
+	outline: none;
+}
+
 button::-moz-focus-inner {
   border: 0;
 }
@@ -156,6 +160,26 @@ button::-moz-focus-inner {
 
 .action-btn {
 	border-radius: 0px;
+}
+
+#btn-toggle-strobe {
+	border-radius: 28px;
+	height: 56px;
+	left: 30px;
+	position: absolute;
+	top: 30px;
+	width: 56px;
+	background:
+		-webkit-linear-gradient(45deg, hsla(210, 98%, 46%, 1) 0%, hsla(210, 98%, 46%, 0) 70%),
+		-webkit-linear-gradient(315deg, hsla(22, 98%, 45%, 1) 10%, hsla(22, 98%, 45%, 0) 80%),
+		-webkit-linear-gradient(225deg, hsla(226, 94%, 47%, 1) 10%, hsla(226, 94%, 47%, 0) 80%),
+		-webkit-linear-gradient(135deg, hsla(177, 98%, 45%, 1) 100%, hsla(177, 98%, 45%, 0) 70%);
+	background:
+		linear-gradient(45deg, hsla(210, 98%, 46%, 1) 0%, hsla(210, 98%, 46%, 0) 70%),
+		linear-gradient(135deg, hsla(22, 98%, 45%, 1) 10%, hsla(22, 98%, 45%, 0) 80%),
+		linear-gradient(225deg, hsla(226, 94%, 47%, 1) 10%, hsla(226, 94%, 47%, 0) 80%),
+		linear-gradient(315deg, hsla(177, 98%, 45%, 1) 100%, hsla(177, 98%, 45%, 0) 70%);
+	}
 }
 
 #popbox-image {
