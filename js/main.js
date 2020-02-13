@@ -22,26 +22,6 @@ $(document).ready( function() {
 			change_content( $(this).attr('content-id') );
 	});
 
-	$('#container-form-contact h3').click( function() {
-		$('#form-contact').slideToggle();
-	});
-
-	$('#btn-submit-contact').click( function() {
-		$.ajax({
-			url: 'php/contact.php',
-			type: 'post',
-			dataType: 'html',
-			data: $('#form-contact').serialize(),
-			success: function(response) {
-				if (response.length < 5) {
-					$('#container-form-contact').html("<p>Mail has successfully been sent. Thank you! I will answer it as fast as possible :)</p>");
-				} else {
-					$('#form-contact .div-error').html(response);
-				}
-			}
-		});
-	});
-
 	$('.img-thumb').click( function() {
 		$('#popbox-image-img').attr("src", $(this).attr("src"));
 		$('#popbox-image-img').on('load', function() {
