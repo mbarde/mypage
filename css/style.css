@@ -47,6 +47,7 @@ img.icon-nav.round {
 }
 
 .container .img-thumb {
+	max-width: 100%;
 	width: 256px;
 	cursor: pointer;
 	border: 1px white solid;
@@ -84,6 +85,16 @@ img.icon-nav.round {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
+}
+
+.container .content img {
+	max-width: 100%;
+}
+
+.container .content img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .container a {
