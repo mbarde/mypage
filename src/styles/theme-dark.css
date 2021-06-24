@@ -1,0 +1,9 @@
+:root {
+  --primary-color: #262626;
+  --primary-color-inverted: white;
+  --secondary-color: #5e5e5e;
+  --secondary-color-inverted: #ff7a18;
+  --font-size-base: 26px;
+  --margin-base: 32px;
+  --padding-base: 32px;
+}

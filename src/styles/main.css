@@ -1,3 +1,86 @@
+@font-face {
+  font-family: 'FredokaOne';
+  src: url('/assets/fonts/FredokaOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+:root {
+  --heading-font: 'FredokaOne';
+  --reading-font: 'Montserrat';
+}
+
+
 body {
-  background: blue;
+  background: var(--primary-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--reading-font);
+  font-size: var(--font-size-base);
+  margin: 0;
+}
+
+nav {
+  background: var(--secondary-color);
+  color: var(--secondary-color-inverted);
+  font-family: var(--heading-font);
+  font-size: 120%;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 0;
+}
+
+nav ul li {
+  float: left;
+  display: block;
+  height: 100%;
+}
+
+nav ul li.active,
+nav ul li:hover {
+  background: var(--primary-color);
+}
+
+nav ul li a {
+  height: 100%;
+  display: block;
+  padding: var(--padding-base);
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+}
+
+article {
+  color: var(--primary-color-inverted);
+  flex: 1;
+  padding: var(--padding-base);
+}
+
+a {
+  color: var(--secondary-color-inverted);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: var(--secondary-color);
+  color: var(--secondary-color-inverted);
+  padding: var(--padding-base);
+}
+
+img.avatar {
+  border-radius: 25px;
+  height: 256px;
+  float: left;
+  margin-right: var(--margin-base);
 }

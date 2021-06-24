@@ -11,7 +11,7 @@ module.exports = {
     "filename": "bundle.js"
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist')
+    contentBase: path.join(__dirname, 'dist'),
   },
  "module": {
     "rules": [
@@ -34,6 +34,10 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
     ]
   },
   plugins: [
@@ -46,7 +50,7 @@ module.exports = {
     }),
     new HtmlWebpackPartialsPlugin([
       {
-        path: path.join(__dirname, './src/html/partials/nav.html'),
+        path: path.join(__dirname, './src/html/partials/header.html'),
         template_filename: '*'
       },
       {
