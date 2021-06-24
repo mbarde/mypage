@@ -11,3 +11,4 @@ for (var i = 0; i < lis.length; i++) {
     lis[i].classList.add('active');
   }
 }
+

@@ -13,7 +13,6 @@
   --reading-font: 'Montserrat';
 }
 
-
 body {
   background: var(--primary-color);
   height: 100vh;
