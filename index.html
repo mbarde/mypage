@@ -1,157 +1,52 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="mstile-144x144.png">
+  <title>m.barde</title>
+  <meta name="description" content="Portfolio of Matthias Barde">
+  <meta name="author" content="Matthias Barde">
 
-		<script src="js/jquery-3.0.0.min.js"></script>
+  <meta property="og:title" content="Portfolio of Matthias Barde">
+  <meta property="og:type" content="website">
+  <!--<meta property="og:url" content="">-->
+  <meta property="og:description" content="Portfolio of Matthias Barde">
+  <!--<meta property="og:image" content="image.png">-->
 
-		<link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/style.css?v=1.7" type="text/css" >
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-		<script src="js/main.js?v=2.2"></script>
-		<script src="js/jquery.bpopup.min.js" ></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
-		<title>m.barde</title>
-	</head>
-	<body class="colorful">
+  <link rel="stylesheet" href="styles.css?v=1.0">
+</head>
 
-		<div class="container">
-
-			<h1><a href="/">m.barde</a></h1>
-
-			<button id="btn-toggle-strobe" class="button" title="Toggle strobe mode"></button>
-
-			<button class="button active-btn nav-btn" content-id="0"><img class="icon-nav" src="img/icon_stupax.png"/> Stupax</button>
-			<button class="button nav-btn" content-id="1"><img class="icon-nav" src="img/icon_dwarf.png"/> Fight of Dwarves</button>
-			<button class="button nav-btn" content-id="2"><img class="icon-nav" src="img/icon_quad2.png"/> QuadWorld</button>
-			<button class="button nav-btn" content-id="3"><img class="icon-nav" src="img/icon_aliensurf.png"/> AlienSurf</button>
-			<br>
-			<button class="button nav-btn" content-id="4"><img class="icon-nav round" src="img/icon_sloth.png"/> Sloth Tools</button>
-			<button class="button nav-btn" content-id="5"><img class="icon-nav round" src="img/icon_poke.png"/> Terminal Pokedex</button>
-			<button class="button nav-btn" content-id="6"><img class="icon-nav round" src="img/av.jpg"/> About</button>
-
-			<div class="content" content-id="0">
-				<b>You are not the guy - you are the level!</b><br>
-				<br>
-				Stupax is a funny sidescroller where you do not control the character, but the level.
-				You control a movable platform to help the guy (namely <i>Stupax</i>) to get through the levels.<br>
-				<br>
-				<a href="https://stupax.mbarde.de/">Play game right here!</a><br>
-				<br>
-				<img class="img-thumb" src="https://github.com/mbarde/stupax/raw/master/docs/screen.png?raw=true"/>
-				<img class="img-thumb" src="https://github.com/mbarde/stupax/raw/master/docs/screen02.png?raw=true"/>
-				<img class="img-thumb" src="https://github.com/mbarde/stupax/raw/master/docs/screen03.png?raw=true"/>
-				<br><br>
-				Features:<br>
-				<ul>
-					<li>Physics engine</li>
-					<li>Gamepad controls (using the Gamepad API)</li>
-					<li>Level editor</li>
-				</ul>
-				Written in JavaScript using BabylonJS it should run in all major browsers (Chrome or Chromium recommended due performance reasons).<br>
-        <br>
-        <a href="http://www.html5gamedevs.com/topic/35777-stupax-sidescroller-game" target="_blank">Thread in BabylonJS forum</a><br>
-        <br>
-				<a href="https://github.com/mbarde/stupax" target="_blank">https://github.com/mbarde/stupax</a><br>
-			</div>
-
-			<div class="content" content-id="1" style="display: none">
-				<b>An arena fighting game for up to 4 players based on MelonJS.</b><br>
-				<br>
-				Fight of Dwarves! is a simple beat beat-‘em-up game for 2 to 4 players.<br>
-				It is based on <a href="https://github.com/melonjs/melonJS/wiki/made-with-melonJS#fight-of-dwarves" target="_blank">MelonJS</a>, which "is a lightweight but yet powerful HTML5 framework designed from the ground up to provide a true plugin-free
-				'write-once, run-everywhere' gaming oriented library."<br><br>
-				<a href="https://fod.mbarde.de/">Play game right here!</a>
-				<br><br>
-				GitHub: <a href="https://github.com/mbarde/fightOfDwarves" target="_blank">https://github.com/mbarde/fightOfDwarves</a>
-				<br><br>
-				<img class="img-thumb" src="img/fod-screen.jpg"/>
-				<img class="img-thumb" src="img/fod-screen-2.jpg"/>
-				<br>
-			</div>
-
-			<div class="content" content-id="2" style="display: none">
-				In this Android game you are able to explore the fantastic QuadWorld.<br>
-				Modify the world, combine the elements, create new stuff and fill the world.<br>
-				<br>
-				Tested on Android 8.1.0 (minimal requirement is 2.3.3).<br>
-				Technologies: Java and <a target="_blank" href="https://www.khronos.org/opengles/">OpenGL ES 2.0.</a>.<br>
-				<br>
-				Textures/Sprites are from the <a href="http://lpc.opengameart.org/" target="_blank">Liberated Pixel Cup</a>
-				and <a href="http://opengameart.org/" target="_blank">opengameart.org</a> .<br>
-				<br>
-				GitHub: <a href="https://github.com/mbarde/QuadWorld" target="_blank">https://github.com/mbarde/QuadWorld</a>
-				<br><br>
-				<a href="files/QuadWorld.apk"><button class="button action-btn">Download built APK for Android (vers. 0.5.5)</button></a><br>
-				<br>
-				<img class="img-thumb" src="img/qw-screen.png"/>
-				<img class="img-thumb" src="img/qw-screen-2.png"/>
-			</div>
-
-			<div class="content" content-id="3" style="display: none">
-				Some aliens invaded your lecture room.<br>
-				You put on an astronaut suite, grab your surfboard and kill them by surfing over their heads.<br>
-				<br>
-				Tested on Android 8.1.0.<br>
-				Technologies: Java and <a target="_blank" href="https://www.khronos.org/opengles/">OpenGL ES 2.0.</a><br>
-				<br>
-				Controls: Tilt your device to control the surfer. Touch the screen to jump.<br>
-				<br>
-				GitHub: <a href="https://github.com/mbarde/AlienSurf" target="_blank">https://github.com/mbarde/AlienSurf</a>
-				<br><br>
-				<a href="files/AlienSurf.apk"><button class="button action-btn">Download built APK for Android (vers. 0.4)</button></a><br>
-				<br>
-				<img class="img-thumb" src="img/as-screen.jpg"/>
-				<img class="img-thumb" src="img/as-screen-2.jpg"/>
-				<img class="img-thumb" src="img/as-screen-3.jpg"/>
-			</div>
-
-			<div class="content" content-id="4" style="display: none">
-				<b>Sloth Tools</b> is a web application for simple <b>home automation</b> using remote-controlled power sockets.
-				<br/><br/>
-				<img class="centered" src="https://raw.githubusercontent.com/mbarde/sloth-tools/master/docs/slothtools.gif"/>
-				<br/>
-				Learn more about the setup & required hardware <a href="https://github.com/mbarde/sloth-tools" target="_blank">here</a>.
-			</div>
-
-			<div class="content" content-id="5" style="display: none">
-				You want to browse and watch pocket monsters from within your terminal?
-				Then you should either overthink your life or checkout <a target="_blank" href="https://github.com/mbarde/terminal-pokedex.git">my code</a> 😉
-				<br><br>
-				Install (Python 3 required, virtualenv recommended):
-				<pre>
-git clone https://github.com/mbarde/terminal-pokedex.git
-pip install -r requirements
-python main.py en
-				</pre>
-				<img class="img-thumb" src="https://raw.githubusercontent.com/mbarde/terminal-pokedex/master/docs/screen.png"/>
-			</div>
-
-			<div class="content" content-id="6" style="display: none">
-				<a href="https://github.com/mbarde" target="_blank"><img class="avatar" src="img/av.jpg"/></a>
-				My name is Matthias Barde.<br>
-				I work as full stack web developer at the <a href="https://www.uni-koblenz-landau.de/en" target="_blank">University of Koblenz-Landau.</a><br>
-				<br>
-				At this page you can find some of my fun projects.<br>
-				<br>
-				For a full list of my open source projects check out my <a href="https://github.com/mbarde" target="_blank">GitHub profile</a>.<br>
-				For some further reading check out my <a href="https://dev.to/mbarde" target="_blank">dev.to profile</a>.
-			</div>
-
-		</div>
-
-		<div id="popbox-image" style="display:none">
-			<img id="popbox-image-img" src=""/><br>
-			<button class="button action-btn b-close" style="float:right">Close</button>
-		</div>
-
-	</body>
+<body>
+  <div class="main">
+    <div class="sidenav">
+      <img src="smile.jpeg" />
+      <span class="name">m.barde</span>
+      <nav>
+        <ul>
+          <li id="nav-li-web"><a href="#web">Web</a></li>
+          <li id="nav-li-fun"><a href="#fun">Fun</a></li>
+          <li id="nav-li-me"><a href="#me">Me</a></li>
+          <li id="nav-li-turtle"><a href="#turtle">🐢</a></li>
+        </ul>
+      </nav>
+      <footer>
+        <span>© 2022 Matthias Barde</span>
+      </footer>
+    </div>
+    <article id="content">
+    </article>
+  </div>
+  <script src="main.js"></script>
+</body>
 </html>
