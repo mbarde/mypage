@@ -27,7 +27,6 @@ const getProjectHtml = (project) => {
 
 const refreshProjects = (category) => {
   const projects = JSON.parse(httpGet('projects.json').responseText)[category];
-  console.log(projects);
   const container = document.getElementById('projects');
   let html = '';
   container.innerHTML = projects.map((project) => getProjectHtml(project)).join('');
