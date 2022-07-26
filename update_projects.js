@@ -19,8 +19,6 @@ const updateProjects = async () => {
   }
 
   const fs = require('fs');
-  const content = 'Some content!';
-
   fs.writeFile('projects.json', JSON.stringify(data), err => {
     if (err) {
       console.error(err);
