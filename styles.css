@@ -89,6 +89,8 @@ a {
   flex-basis: 300px;
   flex-direction: column;
   padding: 20px;
+  position: relative;
+  transition: all .2s ease-in-out;
 }
 
 .project > div {
@@ -98,10 +100,6 @@ a {
 .project .head a {
   font-size: 18px;
   text-decoration: none;
-}
-
-.project .description {
-  color: ##b77e7e;
 }
 
 .project .meta {
@@ -116,6 +114,34 @@ a {
 .project .meta .stars img {
   height: 20px;
   margin-bottom: -2px;
+}
+
+.project .abstract {
+  background-color: black;
+  border: 1px solid #e1e1e1;
+  border-top: none;
+  color: white;
+  display: block;
+  left: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: calc(100% - 2px);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform .2s ease-in-out;
+  width: calc(100% - 40px);
+  z-index: 1;
+}
+
+.project:hover {
+  background-color: black;
+  color: white;
+}
+
+.project:hover .abstract {
+  padding: 20px;
+  transform: scaleY(1);
 }
 
 footer {

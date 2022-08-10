@@ -9,6 +9,7 @@ const getProjectHtml = (project) => {
     `<span class="forks" title="Forks on GitHub"><img src="fork.svg"/>${project.forks_count}</span>`
     :
     '';
+  const abstractStr = project.abstract ? `<div class="abstract">${project.abstract}</div>` : '';
   return `<div class="project fade-in">
     <div class="head">
       <b><a href="${project.html_url}">${project.name}</a></b>
@@ -19,6 +20,7 @@ const getProjectHtml = (project) => {
       ${forkStr}
       ${starStr}
     </div>
+    ${abstractStr}
   </div>`;
 }
 

@@ -5,6 +5,11 @@ const updateProjects = async () => {
     'more': ['twocams', 'raspi-cec-commander'],
   }
 
+  const abstracts = {
+    'twocams': 'Detect 3D position of a ball based on stereo-vision. Part of my Master\'s Thesis, which was a feasibility study on automated soccer goal detection.',
+    'stupax': 'In this platformer game you do not control the character but a movable platform.<br/><a href="https://stupax.mbarde.de/" target="_blank">Play it here!</a>',
+  }
+
   let data = {};
 
   for (category in projects) {
@@ -14,6 +19,8 @@ const updateProjects = async () => {
       const url = `https://api.github.com/repos/mbarde/${project}`
       const res = await fetch(url);
       const json = await res.json();
+      if (abstracts.hasOwnProperty(project)) json.abstract = abstracts[project];
+      else json.abstract = '';
       data[category].push(json);
       console.log(`got ${project}`)
     };
