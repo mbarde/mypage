@@ -1,8 +1,9 @@
 const updateProjects = async () => {
   const projects = {
-    'web': ['sloth-tools', 'flask-qrcode', 'volto-columns-block', 'volto-fullcalendar-block'],
+    'web': ['sloth-tools', 'flask-qrcode', 'volto-image-crop-widget', 'volto-fullcalendar-block', 'collective-ploneboard-vue'],
     'fun': ['stupax', 'fightOfDwarves', 'AlienSurf', 'QuadWorld', 'terminal-pokedex', 'turtlemania-ts'],
-  };
+    'more': ['twocams', 'raspi-cec-commander'],
+  }
 
   let data = {};
 

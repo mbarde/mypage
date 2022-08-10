@@ -1,7 +1,4 @@
-const PROJECTS = {
-  'web': ['sloth-tools', 'flask-qrcode', 'volto-columns-block', 'volto-fullcalendar-block'],
-  'fun': ['stupax', 'fightOfDwarves', 'AlienSurf', 'QuadWorld', 'terminal-pokedex', 'turtlemania-ts'],
-}
+const PROJECTS = JSON.parse(httpGet('projects.json').responseText);
 
 const getProjectHtml = (project) => {
   const starStr = project.stargazers_count > 0 ?
@@ -26,7 +23,8 @@ const getProjectHtml = (project) => {
 }
 
 const refreshProjects = (category) => {
-  const projects = JSON.parse(httpGet('projects.json').responseText)[category];
+  if (!PROJECTS.hasOwnProperty(category)) return;
+  const projects = PROJECTS[category];
   const container = document.getElementById('projects');
   let html = '';
   container.innerHTML = projects.map((project) => getProjectHtml(project)).join('');
@@ -49,9 +47,7 @@ const onHashChanged = (evt) => {
   contentArea.innerHTML = html;
   const navLi = document.getElementById(`nav-li-${path}`);
   navLi.classList.add('active');
-  if (PROJECTS.hasOwnProperty(path)) {
-    refreshProjects(path);
-  }
+  refreshProjects(path);
 };
 
 window.onhashchange = onHashChanged;
