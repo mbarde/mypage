@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/mbarde/mypage/issues"
   },
-  "homepage": "https://github.com/mbarde/mypage#readme"
+  "homepage": "https://github.com/mbarde/mypage#readme",
+  "engines": {
+    "node": "18"
+  }
 }

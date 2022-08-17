@@ -28,7 +28,6 @@ const refreshProjects = (category) => {
   if (!PROJECTS.hasOwnProperty(category)) return;
   const projects = PROJECTS[category];
   const container = document.getElementById('projects');
-  let html = '';
   container.innerHTML = projects.map((project) => getProjectHtml(project)).join('');
 }
 
@@ -39,7 +38,7 @@ function httpGet(url) {
   return xmlHttp;
 }
 
-const onHashChanged = (evt) => {
+const onHashChanged = () => {
   const navLis = document.querySelectorAll('nav li');
   navLis.forEach((navLi) => navLi.classList.remove('active'));
   const hash = window.location.hash || '#me';
@@ -50,6 +49,14 @@ const onHashChanged = (evt) => {
   const navLi = document.getElementById(`nav-li-${path}`);
   navLi.classList.add('active');
   refreshProjects(path);
+
+  if (path === 'turtle') {
+    let scriptElement = document.createElement('script');
+    scriptElement.type = 'text/javascript';
+    scriptElement.src = './turtle.js';
+    scriptElement.setAttribute('clr', 'black');
+    document.head.appendChild(scriptElement);
+  }
 };
 
 window.onhashchange = onHashChanged;
