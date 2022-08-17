@@ -50,8 +50,14 @@ const onHashChanged = () => {
   navLi.classList.add('active');
   refreshProjects(path);
 
+  const el = document.getElementById('turtlemania-js');
+  if (el !== null) {
+    el.parentNode.removeChild(el);
+  }
+
   if (path === 'turtle') {
     let scriptElement = document.createElement('script');
+    scriptElement.id = 'turtlemania-js';
     scriptElement.type = 'text/javascript';
     scriptElement.src = './turtle.js';
     scriptElement.setAttribute('clr', 'black');
