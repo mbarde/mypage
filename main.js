@@ -31,6 +31,26 @@ const refreshProjects = (category) => {
   container.innerHTML = projects.map((project) => getProjectHtml(project)).join('');
 }
 
+const onToggleSidenav = () => {
+  const sidenav = document.getElementsByClassName('sidenav')[0];
+  if (sidenav.classList.contains('open')) onHideSidenav();
+  else onOpenSidenav();
+}
+
+const onOpenSidenav = () => {
+  const sidenav = document.getElementsByClassName('sidenav')[0];
+  sidenav.classList.add('open');
+  const toggle = document.getElementsByClassName('sidenav-toggle')[0];
+  toggle.classList.add('open');
+}
+
+const onHideSidenav = () => {
+  const sidenav = document.getElementsByClassName('sidenav')[0];
+  sidenav.classList.remove('open');
+  const toggle = document.getElementsByClassName('sidenav-toggle')[0];
+  toggle.classList.remove('open');
+}
+
 function httpGet(url) {
   const xmlHttp = new XMLHttpRequest();
   xmlHttp.open('GET', url, false);
@@ -63,6 +83,8 @@ const onHashChanged = () => {
     scriptElement.setAttribute('clr', 'black');
     document.head.appendChild(scriptElement);
   }
+
+  onToggleSidenav();
 };
 
 window.onhashchange = onHashChanged;

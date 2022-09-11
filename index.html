@@ -27,7 +27,9 @@
 
 <body>
   <div class="main">
-    <div class="sidenav">
+    <div class="sidenav-toggle" onclick="onToggleSidenav(); event.stopPropagation();">
+    </div>
+    <div class="sidenav open">
       <img src="smile.jpeg" />
       <span class="name">m.barde</span>
       <nav>
@@ -43,7 +45,7 @@
         <span>© 2022 Matthias Barde</span>
       </footer>
     </div>
-    <article id="content">
+    <article id="content" onclick="onHideSidenav()">
     </article>
   </div>
   <script src="main.js"></script>
