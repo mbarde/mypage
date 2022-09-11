@@ -179,6 +179,7 @@ h1 {
   -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
   cursor: pointer;
+  display: none;
   height: 75px;
   left: 20px;
   position: fixed;
@@ -203,6 +204,9 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+  .sidenav-toggle {
+    display: block;
+  }
   .sidenav {
     background-color: white;
     position: fixed;
