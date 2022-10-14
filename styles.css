@@ -185,11 +185,11 @@ h1 {
   position: fixed;
   top: 20px;
   width: 75px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .sidenav-toggle::before {
-  color: #484848;
+  color: #DB443A;
   content: '☰';
   display: block;
   font-size: 40px;
@@ -198,9 +198,9 @@ h1 {
 }
 
 .sidenav-toggle.open::before {
-  content: '🗙';
-  margin-left: 23px;
-  margin-top: 6px;
+  content: '✗';
+  margin-left: 21px;
+  margin-top: 11px;
 }
 
 @media screen and (max-width: 768px) {
@@ -212,7 +212,7 @@ h1 {
     position: fixed;
     transform: translateX(-100%);
     transition: transform .5s ease-in-out;
-    z-index: 1;
+    z-index: 2;
   }
   .sidenav.open {
     transform: translateX(0);
