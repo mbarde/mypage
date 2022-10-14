@@ -144,6 +144,14 @@ a {
   transform: scaleY(1);
 }
 
+.project:hover .forks img {
+  filter: invert(100%);
+}
+
+.project:hover .stars img {
+  filter: brightness(1000%);
+}
+
 footer {
   font-size: 18px;
   margin-bottom: 10px;
