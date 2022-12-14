@@ -65,7 +65,9 @@ const onHashChanged = () => {
   navLis.forEach((navLi) => navLi.classList.remove('active'));
   const hash = window.location.hash || '#me';
   const path = hash.slice(1);
-  const html = httpGet(`${path}.html`).responseText;
+  const res = httpGet(`${path}.html`);
+  if (res.status !== 200) return;
+  const html = res.responseText;
   const contentArea = document.getElementById('content');
   contentArea.innerHTML = html;
   const navLi = document.getElementById(`nav-li-${path}`);
