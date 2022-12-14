@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "",
   "scripts": {
-    "build": "node update_projects.js"
+    "build": "node update_projects.js && node update_sitemap.js"
   },
   "repository": {
     "type": "git",
