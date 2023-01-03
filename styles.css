@@ -187,6 +187,10 @@ hr {
   flex-wrap: wrap;
 }
 
+.banners a img {
+  max-width: 100%;
+}
+
 .banners a.oga {
   background-color: #375073;
   padding: 15px;
