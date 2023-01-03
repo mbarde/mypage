@@ -91,6 +91,18 @@ const onHashChanged = () => {
   onToggleSidenav();
 };
 
+const switchHands = () => {
+  const main = document.querySelector('.main');
+  if (main.classList.contains('no-lefty-mode')) {
+    main.classList.remove('no-lefty-mode');
+  } else {
+    main.classList.add('no-lefty-mode');
+  }
+  const dot = document.querySelector('.dot');
+  dot.classList.remove('dot');
+  setTimeout(() => dot.classList.add('dot'));
+}
+
 window.onhashchange = onHashChanged;
 
 onHashChanged(false);

@@ -1,0 +1,88 @@
+/* from: https://codepen.io/availchet/pen/rNMRvZB */
+:root {
+  --dot-color: #ac3c3c;
+  --dot-size: 15px;
+}
+
+.dot {
+  background: var(--dot-color);
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  height: var(--dot-size);
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  width: var(--dot-size);
+}
+
+.no-lefty-mode .dot {
+  left: 20px;
+  right: auto;
+}
+
+.dot:after {
+  animation: pulse 2s ease 0s;
+  background: var(--dot-color);
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: var(--dot-size);
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: var(--dot-size);
+}
+
+.dot:before {
+  animation: pulse2 2s ease 0s;
+  background: var(--dot-color);
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: var(--dot-size);
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: var(--dot-size);
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  80% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+@keyframes pulse2 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dot {
+    display: block;
+  }
+}
