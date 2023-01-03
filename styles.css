@@ -164,8 +164,12 @@ footer {
   margin-top: auto;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
+}
+
+hr {
+  border: 1px solid #e1e1e1;
 }
 
 .fade-in {
@@ -174,6 +178,17 @@ h1 {
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 1s;
+}
+
+.banners {
+  align-items: center;
+  column-gap: 15px;
+  display: flex;
+}
+
+.banners a.oga {
+  background-color: #375073;
+  padding: 15px;
 }
 
 @keyframes fadeInOpacity {
