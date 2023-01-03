@@ -184,6 +184,7 @@ hr {
   align-items: center;
   column-gap: 15px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .banners a.oga {
