@@ -170,6 +170,8 @@ h1, h2, h3 {
 
 hr {
   border: 1px solid #e1e1e1;
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
 
 .fade-in {
