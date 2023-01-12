@@ -92,6 +92,11 @@ const onHashChanged = () => {
 };
 
 const switchHands = () => {
+  const sidenav = document.querySelector('.sidenav');
+  sidenav.classList.add('no-transition');
+  setTimeout(() => {
+    sidenav.classList.remove('no-transition');
+  });
   const main = document.querySelector('.main');
   if (main.classList.contains('no-lefty-mode')) {
     main.classList.remove('no-lefty-mode');

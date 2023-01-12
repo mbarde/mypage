@@ -262,6 +262,10 @@ hr {
     z-index: 2;
   }
 
+  .sidenav.no-transition {
+    transition: none;
+  }
+
   .no-lefty-mode .sidenav {
     border-left: 1px solid #e1e1e1;
     border-right: none;
