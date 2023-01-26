@@ -70,6 +70,11 @@ function httpGet(url) {
   });
 }
 
+const updatePlayBtn = () => {
+  const btn = document.getElementById('btn-play-knas');
+  if (btn) btn.textContent = window.XMPlayer.playing ? '⏸️ Pause it' : '▶️ Play some music';
+}
+
 const onHashChanged = async () => {
   const navLis = document.querySelectorAll('nav li');
   navLis.forEach((navLi) => navLi.classList.remove('active'));
@@ -96,6 +101,8 @@ const onHashChanged = async () => {
       scriptElement.src = './turtle.js';
       scriptElement.setAttribute('clr', 'black');
       document.head.appendChild(scriptElement);
+
+      updatePlayBtn();
     }
   });
 
@@ -140,9 +147,8 @@ const toggleXMPlayer = () => {
   
   if (window.XMPlayer.playing) {
     window.XMPlayer.pause();
-    btn.textContent = '▶️ Play some music';
   } else {
     window.XMPlayer.play();
-    btn.textContent = '⏸️ Pause it';
   }
+  updatePlayBtn();
 }
