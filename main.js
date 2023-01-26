@@ -122,3 +122,27 @@ const switchHands = () => {
 window.onhashchange = onHashChanged;
 
 onHashChanged(false);
+
+const request = new XMLHttpRequest();
+request.open('GET', 'knas.xm', true);
+request.responseType = 'arraybuffer';
+request.onload = () => {
+  const XMPlayer = window.XMPlayer;
+  XMPlayer.init();
+  XMPlayer.load(request.response);
+};
+request.send();
+
+console.log = function() {};
+
+const toggleXMPlayer = () => {
+  const btn = document.getElementById('btn-play-knas');
+  
+  if (window.XMPlayer.playing) {
+    window.XMPlayer.pause();
+    btn.textContent = '▶️ Play some music';
+  } else {
+    window.XMPlayer.play();
+    btn.textContent = '⏸️ Pause it';
+  }
+}

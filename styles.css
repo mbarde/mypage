@@ -24,6 +24,21 @@ a {
   color: var(--linkColor);
 }
 
+button {
+  border: 1px solid black;
+  background: var(--linkColor);
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: black;
+}
+
 .main {
   display: flex;
 }
