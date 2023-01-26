@@ -8,6 +8,7 @@ const updateProjects = async () => {
   const abstracts = {
     'twocams': 'Detect 3D position of a ball based on stereo-vision. Part of my Master\'s Thesis, which was a feasibility study on automated soccer goal detection.',
     'stupax': 'In this platformer game you do not control the character but a movable platform.<br/><a href="https://stupax.mbarde.de/" target="_blank">Play it here!</a>',
+    'fightOfDwarves': 'Join the fight for the crown <a href="https://fod.mbarde.de/" target="_blank">right here!</a>',
   }
 
   let data = {};
