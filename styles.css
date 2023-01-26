@@ -10,6 +10,10 @@
   font-display: swap;
 }
 
+:root {
+  --linkColor: #ac3c3c;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   margin: 0;
@@ -17,7 +21,7 @@ body {
 }
 
 a {
-  color: #DB443A;
+  color: var(--linkColor);
 }
 
 .main {
@@ -243,7 +247,7 @@ hr {
 }
 
 .sidenav-toggle::before {
-  color: #DB443A;
+  color: var(--linkColor);
   content: '☰';
   display: block;
   font-size: 40px;
