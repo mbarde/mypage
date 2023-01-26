@@ -60,7 +60,7 @@ function httpGet(url) {
   return xmlHttp;
 }
 
-const onHashChanged = () => {
+const onHashChanged = async () => {
   const navLis = document.querySelectorAll('nav li');
   navLis.forEach((navLi) => navLi.classList.remove('active'));
   const hash = window.location.hash || '#me';
