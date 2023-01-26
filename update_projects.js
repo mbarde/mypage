@@ -18,6 +18,12 @@ const updateProjects = async () => {
       const project = projects[category][i];
       const url = `https://api.github.com/repos/mbarde/${project}`
       const res = await fetch(url);
+      if (res.status !== 200) {
+        console.log(`ERROR: got status ${res.status} for url: ${url}`)
+        console.log(await res.text());
+        console.log('update failed!')
+        return;
+      }
       const json = await res.json();
       if (abstracts.hasOwnProperty(project)) json.abstract = abstracts[project];
       else json.abstract = '';
