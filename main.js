@@ -130,6 +130,10 @@ window.onhashchange = onHashChanged;
 
 onHashChanged(false);
 
+setTimeout(() => {
+  document.getElementsByClassName('sidenav')[0].classList.remove('hidden');
+}, 500);
+
 const request = new XMLHttpRequest();
 request.open('GET', 'knas.xm', true);
 request.responseType = 'arraybuffer';
@@ -144,7 +148,7 @@ console.log = function() {};
 
 const toggleXMPlayer = () => {
   const btn = document.getElementById('btn-play-knas');
-  
+
   if (window.XMPlayer.playing) {
     window.XMPlayer.pause();
   } else {

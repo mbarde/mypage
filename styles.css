@@ -295,6 +295,10 @@ hr {
     z-index: 2;
   }
 
+  .sidenav.hidden {
+    display: none;
+  }
+
   .sidenav.no-transition {
     transition: none;
   }
