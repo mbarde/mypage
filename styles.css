@@ -327,3 +327,56 @@ hr {
     width: calc(100% + 80px);
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --darker: #1c2128;
+    --lighter: #22272e;
+    --border: #444c56;
+    --linkColor: #ED6D64;
+  }
+  body {
+    background-color: var(--darker);
+    color: white;
+  }
+  .sidenav {
+    border-color: var(--border);
+  }
+  .project,
+  .sidenav nav ul li a {
+    background-color: var(--lighter);
+    border: 1px solid var(--border);
+  }
+  .sidenav nav ul li a:hover {
+    color: white;
+  }
+  .project a {
+    color: white;
+  }
+  .project .abstract,
+  .project:hover {
+    background-color: var(--darker);
+    border: 1px solid var(--border);
+  }
+  .project .abstract {
+    border-top: none;
+    margin-left: -1px;
+    margin-right: -1px;
+  }
+  #turtlemania-canvas {
+    border-color: var(--border);
+    background-color: var(--lighter);
+  }
+  button {
+    background-color: var(--lighter);
+    border-color: var(--border);
+  }
+  button:hover {
+    background-color: var(--darker);
+    border-color: var(--border);
+  }
+  hr {
+    border-color: var(--border);
+  }
+}
+  

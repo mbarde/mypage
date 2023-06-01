@@ -99,7 +99,9 @@ const onHashChanged = async () => {
       scriptElement.id = 'turtlemania-js';
       scriptElement.type = 'text/javascript';
       scriptElement.src = './turtle.js';
-      scriptElement.setAttribute('clr', 'black');
+      const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      scriptElement.setAttribute('clr', isDarkMode ? 'white' : 'black');
+      scriptElement.setAttribute('clr-font', isDarkMode ? 'white' : 'black');
       document.head.appendChild(scriptElement);
 
       updatePlayBtn();
