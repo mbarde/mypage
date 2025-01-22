@@ -5,8 +5,8 @@
 }
 
 @font-face {
-  font-family: 'Playfair Display';
-  src: url(PlayfairDisplay-Regular.ttf);
+  font-family: 'Caprasimo';
+  src: url(Caprasimo-Regular.ttf);
   font-display: swap;
 }
 
@@ -204,7 +204,8 @@ footer {
 }
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Caprasimo';
+  font-weight: 200;
 }
 
 hr {
